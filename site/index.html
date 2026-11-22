@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Grammar Quest — ไวยากรณ์อังกฤษเพื่อ TOEIC</title>
+    <meta name="description" content="ฝึกไวยากรณ์อังกฤษแบบเกมเพื่อเตรียมสอบ TOEIC พร้อมเฉลยและเหตุผลภาษาไทยทุกข้อ" />
+    <meta name="theme-color" content="#fafaf9" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="preload" href="./assets/fonts/ibm-plex-sans-thai-thai-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/ibm-plex-sans-thai-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <script>
+      // apply theme before first paint (avoids flash)
+      try {
+        var t = (JSON.parse(localStorage.getItem("gq.v1") || "{}").settings || {}).theme || "auto";
+        var d = t === "dark" || (t === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = d ? "dark" : "light";
+      } catch (e) {}
+    </script>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">ข้ามไปที่เนื้อหา</a>
+    <div class="app">
+      <nav id="nav" class="nav" aria-label="เมนูหลัก"></nav>
+      <div>
+        <div id="offline" class="offline-bar" hidden></div>
+        <main id="main" tabindex="-1">
+          <noscript><p>แอปนี้ต้องเปิด JavaScript</p></noscript>
+        </main>
+      </div>
+    </div>
+    <div id="toasts" class="toasts"></div>
+    <div id="sr-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

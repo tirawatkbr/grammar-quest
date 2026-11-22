@@ -1,0 +1,12 @@
+{
+  "chapter": 1,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = first unnumbered 'Exercise' (p.3-4).",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq part of speech", "pages": "3-4" },
+    { "ex": "1", "count": 15, "type": "word form + part of speech", "pages": "5" },
+    { "ex": "2", "count": 8, "type": "error identification", "pages": "6" },
+    { "ex": "3", "count": 30, "type": "mcq two underlined words", "pages": "6-9" }
+  ],
+  "toeicMin": 15
+}

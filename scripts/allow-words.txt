@@ -1,0 +1,2 @@
+# Words accepted by scripts/validate.mjs that are not in the dictionary (one per line)
+UK

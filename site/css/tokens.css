@@ -1,0 +1,115 @@
+/* Grammar Quest — design tokens. See docs/DESIGN-SYSTEM.md.
+   Colour pairs are verified by scripts/contrast.mjs (WCAG 2.1 AA). Only hex values here. */
+:root {
+  /* Colour — light */
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-2: #f5f5f4;
+  --text: #1c1917;
+  --text-muted: #57534e;
+  --border: #e7e5e4;
+  --border-strong: #8a8380;
+  --primary: #3730a3;
+  --primary-hover: #312e81;
+  --on-primary: #ffffff;
+  --primary-soft: #eef2ff;
+  --success: #15803d;
+  --on-success: #ffffff;
+  --success-soft: #f0fdf4;
+  --danger: #b91c1c;
+  --on-danger: #ffffff;
+  --danger-soft: #fef2f2;
+  --warning: #a14a08;
+  --warning-soft: #fffbeb;
+  --focus: #4f46e5;
+  --track: #e7e5e4;
+  --heart: #dc2626;
+  --streak: #c2410c;
+  --xp: #a16207;
+  --scrim: #1c1917;
+
+  /* Typography (IBM Plex Sans Thai, Google Fonts) */
+  --font: "IBM Plex Sans Thai", "Noto Sans Thai", "Leelawadee UI", Tahoma, system-ui, sans-serif;
+  --fs-xs: 0.875rem;  /* 14px — captions, badges only */
+  --fs-sm: 1rem;      /* 16px — body */
+  --fs-md: 1.125rem;  /* 18px — question prompt */
+  --fs-lg: 1.25rem;   /* 20px — section title */
+  --fs-xl: 1.5rem;    /* 24px — screen title */
+  --fs-2xl: 1.875rem; /* 30px — big numbers */
+  --lh-body: 1.7;     /* Thai needs room for upper/lower vowels and tone marks */
+  --lh-tight: 1.4;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Spacing — 4/8 scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --border-w: 1px;
+  --border-w-strong: 2px;
+
+  /* Elevation — two levels only */
+  --shadow-1: 0 1px 2px rgba(28, 25, 23, 0.06), 0 1px 3px rgba(28, 25, 23, 0.08);
+  --shadow-2: 0 8px 24px rgba(28, 25, 23, 0.14);
+
+  /* Motion */
+  --dur-press: 120ms;
+  --dur-enter: 200ms;
+  --dur-exit: 140ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Layout */
+  --content-max: 720px;
+  --tap: 44px;
+  --nav-h: 64px;
+  --z-nav: 10;
+  --z-sheet: 20;
+  --z-dialog: 40;
+  --z-toast: 100;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0c0a09;
+  --surface: #1c1917;
+  --surface-2: #292524;
+  --text: #f5f5f4;
+  --text-muted: #a8a29e;
+  --border: #44403c;
+  --border-strong: #8a8380;
+  --primary: #a5b4fc;
+  --primary-hover: #c7d2fe;
+  --on-primary: #1e1b4b;
+  --primary-soft: #1e1b4b;
+  --success: #4ade80;
+  --on-success: #052e16;
+  --success-soft: #052e16;
+  --danger: #f87171;
+  --on-danger: #450a0a;
+  --danger-soft: #450a0a;
+  --warning: #fbbf24;
+  --warning-soft: #422006;
+  --focus: #a5b4fc;
+  --track: #44403c;
+  --heart: #f87171;
+  --streak: #fb923c;
+  --xp: #facc15;
+  --scrim: #000000;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
