@@ -18,7 +18,7 @@ Rule: the source folder `OneDrive\Desktop\M.4` is READ-ONLY (only the PDFs are r
 | u02 | 2 | Noun | ✅ done (validate, diff, full UI play) | 80 | 15 |
 | u03 | 3 | Article | ✅ done (validate, diff, full UI play) | 118 blanks in 89 questions | 15 |
 | u04 | 4 | Quantifier | ✅ done (validate, diff, full UI play) | 105 | 15 |
-| u05 | 5 | Pronoun | ⏳ | | |
+| u05 | 5 | Pronoun | ✅ done (validate, diff, full UI play) | 87 | 15 |
 | u06 | 6 | Subject-Verb Agreement | ⏳ | | |
 | u07 | 7 | Present Tenses | ⏳ | | |
 | u08 | 8 | Past Tenses | ⏳ | | |

@@ -22,6 +22,7 @@ export function normalize(s) {
     .replace(/[“”]/g, '"')
     .replace(/[–—]/g, "-")
     .replace(/\s+/g, " ")
+    .replace(/\s*\/\s*/g, "/")
     .trim();
   for (const [re, rep] of CONTRACTIONS) t = t.replace(re, rep);
   t = t

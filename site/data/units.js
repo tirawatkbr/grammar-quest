@@ -273,5 +273,69 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u05",
+    "chapter": 5,
+    "title": "Pronoun",
+    "titleTh": "คำสรรพนาม",
+    "file": "u05.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u05-l1",
+        "title": "เลือกคำสรรพนาม (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u05-l2",
+        "title": "เลือกคำสรรพนาม (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u05-l3",
+        "title": "เปลี่ยนนามวลีเป็นสรรพนามบุรุษที่ 3",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u05-l4",
+        "title": "Reflexive pronoun หรือ my own",
+        "kind": "sheet",
+        "count": 12
+      },
+      {
+        "id": "u05-l5",
+        "title": "Indefinite pronoun (someone, anything, nothing …)",
+        "kind": "sheet",
+        "count": 15
+      },
+      {
+        "id": "u05-l6",
+        "title": "เลือกสรรพนามที่ถูกต้อง (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u05-l7",
+        "title": "เลือกสรรพนามที่ถูกต้อง (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u05-l8",
+        "title": "เลือกสรรพนามที่ถูกต้อง (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u05-l9",
+        "title": "แนวข้อสอบ TOEIC: Pronoun",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

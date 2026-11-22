@@ -45,3 +45,10 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 ## All units — TOEIC answer positions
 - `scripts/rebalance-toeic.mjs` spreads the correct letter of new TOEIC items across a–d (validator rejects
   any letter above 40 %). Sheet items keep the sheet's original order.
+
+## Unit 5 — Pronoun (sheet chapter 5)
+- Ex.0 (20), Ex.1 (10), Ex.2 (12), Ex.3 (15), Ex.4 (30) — all included.
+- Ex.1 asks to write the pronoun above the underlined phrase → typed answer after "→".
+  Gender-unspecified persons accept he/she, he or she, she/he (him/her likewise); spaces around "/" are ignored.
+- Ex.2 #4 first blank accepts "her own" and "her".
+- Ex.3 accepts both -one/-body forms (nobody / no one, anyone / anybody, everybody / everyone).
