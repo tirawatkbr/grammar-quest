@@ -103,3 +103,9 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.1 accepts every modal that fits each blank (e.g. Text B (4)/(5) may / might / could).
 - Ex.3 #23: answer *didn't need to work* — the text says "we left the office at the usual hour", so no overtime
   was done (needn't have worked would mean it was done unnecessarily). The explanation compares the two.
+
+## Unit 14 — Preposition (sheet chapter 18, 9 pages)
+- Exercise (20), Ex.1 (15 sentences, 31 blanks), Ex.2 (15 sentences), Ex.3 (30) — all included.
+- Summary cards include the handwritten notes on p.2 (in + vehicles you can't walk in: car/taxi; on + vehicles you can walk in: train/boat/plane).
+- Ex.1 accepts reasonable alternatives (e.g. #5 in/within, #7 to/until/through, #11 past/by, #12 around/round, #13 below/to).
+- Exercise #8 *by bicycle*: explanation notes that *on a bicycle* (with article) is also correct English but not offered.

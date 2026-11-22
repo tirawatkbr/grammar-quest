@@ -1,0 +1,12 @@
+{
+  "chapter": 18,
+  "pages": 9,
+  "note": "Counted from page images (sheet chapter 18 Preposition, app unit 14). Ex '0' = unnumbered 'Exercise' (p.3-4, 20 items).",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 15, "type": "fill prepositions", "pages": "5" },
+    { "ex": "2", "count": 15, "type": "fill prepositions", "pages": "6" },
+    { "ex": "3", "count": 30, "type": "mcq", "pages": "6-9" }
+  ],
+  "toeicMin": 15
+}

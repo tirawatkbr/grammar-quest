@@ -27,7 +27,7 @@ Rule: the source folder `OneDrive\Desktop\M.4` is READ-ONLY (only the PDFs are r
 | u11 | 11 | Conditional Sentence | ✅ done (validate, diff, full UI play) | 85 | 15 |
 | u12 | 12 | Non-finite Verb | ✅ done (validate, diff, full UI play) | 115 | 15 |
 | u13 | 13 | Modal Verb | ✅ done (validate, diff, full UI play) | 69 | 15 |
-| u14 | 18 | Preposition | ⏳ | | |
+| u14 | 18 | Preposition | ✅ done (validate, diff, full UI play) | 80 | 15 |
 
 ## Per-unit checklist
 1. Read every page image of the chapter
