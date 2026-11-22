@@ -79,3 +79,10 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.0 (20), Ex.1 (5), Ex.2 (6 combine-sentence items as word-order questions with distractor words), Ex.3 (10), Ex.4 (30).
 - Word-order checking ignores case and punctuation; chips carry no punctuation and the first word is lower-cased.
 - Ex.0 #16 accepts will be seeing / is seeing.
+
+## Unit 10 — Passive Voice (sheet chapter 10)
+- Ex.0 (20), Ex.1 (10), Ex.2 (12), Ex.3 (30) — all included.
+- Ex.1 is a typed transformation of the rest of the sentence after the given start; variants with/without
+  an informative by-phrase and with different phrase order are accepted.
+- Ex.0 #3: the only passive option is "is being watched" (the natural "is watched" is not offered).
+- Ex.3 #5: sheet "Atamaca" → "Atacama" (the desert's real name).

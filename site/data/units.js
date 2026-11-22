@@ -605,5 +605,75 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u10",
+    "chapter": 10,
+    "title": "Passive Voice",
+    "titleTh": "ประธานถูกกระทำ",
+    "file": "u10.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u10-l1",
+        "title": "เลือก Passive / Active (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u10-l2",
+        "title": "เลือก Passive / Active (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u10-l3",
+        "title": "เปลี่ยน Active เป็น Passive (1)",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u10-l4",
+        "title": "เปลี่ยน Active เป็น Passive (2)",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u10-l5",
+        "title": "Active หรือ Passive (1)",
+        "kind": "sheet",
+        "count": 6
+      },
+      {
+        "id": "u10-l6",
+        "title": "Active หรือ Passive (2)",
+        "kind": "sheet",
+        "count": 6
+      },
+      {
+        "id": "u10-l7",
+        "title": "เลือกคำตอบ Passive Voice (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u10-l8",
+        "title": "เลือกคำตอบ Passive Voice (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u10-l9",
+        "title": "เลือกคำตอบ Passive Voice (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u10-l10",
+        "title": "แนวข้อสอบ TOEIC: Passive Voice",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];
