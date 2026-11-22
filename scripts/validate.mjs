@@ -131,6 +131,13 @@ for (const { file, unit } of units) {
     if (!["sheet", "toeic"].includes(l.kind)) err(L, "kind must be sheet|toeic");
     if (!l.questions?.length) err(L, "no questions");
     if (l.questions.length > 15) warn(L, `${l.questions.length} questions (>15) — consider splitting`);
+    if (l.kind === "toeic") {
+      const m = l.questions.filter((q) => q.type === "mcq");
+      for (const k of LETTERS) {
+        const c = m.filter((q) => q.answer === k).length;
+        if (m.length >= 8 && c / m.length > 0.4) err(L, `answer "${k}" is ${c}/${m.length} of TOEIC mcqs — run scripts/rebalance-toeic.mjs`);
+      }
+    }
     l.questions.forEach((q, qi) => {
       const Q = q.id || `${L}#${qi}`;
       qn++;

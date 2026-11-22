@@ -1,0 +1,13 @@
+{
+  "chapter": 4,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3-4).",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 30, "type": "many/much + noun form", "pages": "5" },
+    { "ex": "2", "count": 15, "type": "few/a few/little/a little", "pages": "5-6" },
+    { "ex": "3", "count": 10, "type": "both/either/neither/all/none", "pages": "6" },
+    { "ex": "4", "count": 30, "type": "mcq", "pages": "6-9" }
+  ],
+  "toeicMin": 15
+}

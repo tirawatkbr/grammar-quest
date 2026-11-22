@@ -203,5 +203,75 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u04",
+    "chapter": 4,
+    "title": "Quantifier",
+    "titleTh": "คำบอกปริมาณ",
+    "file": "u04.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u04-l1",
+        "title": "เลือกคำบอกปริมาณ (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u04-l2",
+        "title": "เลือกคำบอกปริมาณ (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u04-l3",
+        "title": "many หรือ much (1)",
+        "kind": "sheet",
+        "count": 15
+      },
+      {
+        "id": "u04-l4",
+        "title": "many หรือ much (2)",
+        "kind": "sheet",
+        "count": 15
+      },
+      {
+        "id": "u04-l5",
+        "title": "few / a few / little / a little",
+        "kind": "sheet",
+        "count": 15
+      },
+      {
+        "id": "u04-l6",
+        "title": "both / either / neither / all / none",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u04-l7",
+        "title": "เลือกคำตอบ Quantifier (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u04-l8",
+        "title": "เลือกคำตอบ Quantifier (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u04-l9",
+        "title": "เลือกคำตอบ Quantifier (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u04-l10",
+        "title": "แนวข้อสอบ TOEIC: Quantifier",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

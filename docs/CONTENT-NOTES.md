@@ -35,3 +35,13 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.1 #4: the sheet's question tag "didn't it" does not agree with "The questions" (should be "didn't they");
   the sentence is kept and a tip explains this.
 - Ex.2 #6 ("one point on ___ grid") accepts a / the; Ex.3 #25 ("___ grocery store") accepts the / a.
+
+## Unit 4 — Quantifier (sheet chapter 4)
+- Ex.0 (20), Ex.1 (30), Ex.2 (15), Ex.3 (10), Ex.4 (30) — all included.
+- Ex.1 (many/much + plural if needed) is a typed answer of the whole phrase, e.g. "many teeth".
+  Countability follows the sheet's Noun chapter (accommodation, trouble, vocabulary → uncountable).
+- Ex.0 #17 ("These children saw ___ people…") → *some*; *few* would need a negative context.
+
+## All units — TOEIC answer positions
+- `scripts/rebalance-toeic.mjs` spreads the correct letter of new TOEIC items across a–d (validator rejects
+  any letter above 40 %). Sheet items keep the sheet's original order.
