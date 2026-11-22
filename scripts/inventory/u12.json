@@ -1,0 +1,12 @@
+{
+  "chapter": 12,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3-4).",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 50, "type": "to do / doing", "pages": "5" },
+    { "ex": "2", "count": 15, "type": "gerund or infinitive", "pages": "5-6" },
+    { "ex": "3", "count": 30, "type": "mcq", "pages": "6-9" }
+  ],
+  "toeicMin": 15
+}

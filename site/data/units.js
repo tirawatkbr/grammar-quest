@@ -751,5 +751,87 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u12",
+    "chapter": 12,
+    "title": "Non-finite Verb",
+    "titleTh": "กริยาไม่แท้",
+    "file": "u12.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u12-l1",
+        "title": "to V / V. รูปเดิม / V.ing (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u12-l2",
+        "title": "to V / V. รูปเดิม / V.ing (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u12-l3",
+        "title": "to do หรือ doing (1)",
+        "kind": "sheet",
+        "count": 13
+      },
+      {
+        "id": "u12-l4",
+        "title": "to do หรือ doing (2)",
+        "kind": "sheet",
+        "count": 13
+      },
+      {
+        "id": "u12-l5",
+        "title": "to do หรือ doing (3)",
+        "kind": "sheet",
+        "count": 13
+      },
+      {
+        "id": "u12-l6",
+        "title": "to do หรือ doing (4)",
+        "kind": "sheet",
+        "count": 11
+      },
+      {
+        "id": "u12-l7",
+        "title": "Gerund หรือ Infinitive (1)",
+        "kind": "sheet",
+        "count": 8
+      },
+      {
+        "id": "u12-l8",
+        "title": "Gerund หรือ Infinitive (2)",
+        "kind": "sheet",
+        "count": 7
+      },
+      {
+        "id": "u12-l9",
+        "title": "เลือกคำตอบ Non-finite Verb (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u12-l10",
+        "title": "เลือกคำตอบ Non-finite Verb (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u12-l11",
+        "title": "เลือกคำตอบ Non-finite Verb (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u12-l12",
+        "title": "แนวข้อสอบ TOEIC: Gerund / Infinitive / Participle",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

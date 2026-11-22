@@ -92,3 +92,8 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.1: each sentence start is a question; the 10 endings are the chips (each used once in the sheet).
 - Ex.2 #2 accepts weren't / wasn't; #6 had been driving / had driven; #7 were / was; #15 would have been sitting / would have sat.
 - Ex.4 #19: the sheet labels two options "b."; the third option is shown as "c" (I would if I could).
+
+## Unit 12 — Non-finite Verb (sheet chapter 12)
+- Ex.0 (20), Ex.1 (50 "to do / doing"), Ex.2 (15), Ex.3 (30) — all included.
+- Ex.1 follows the sheet's verb lists; verbs that take an object (or passive) + to V are explained as such.
+- Ex.3 #12 / #15: "were beginning ___" → to feel / to worry (avoids double -ing).
