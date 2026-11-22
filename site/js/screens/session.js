@@ -180,7 +180,13 @@ export function runSession(opts) {
   function whyWrongFor(q, response) {
     if (!q.whyWrong) return null;
     if (q.type === "mcq") return q.whyWrong[response] || null;
-    if (q.type === "error") return q.whyWrong[String(response)] || null;
+    if (q.type === "error") {
+      if (!Array.isArray(response)) return q.whyWrong[String(response)] || null;
+      const ans = q.answer.map(Number);
+      const extra = response.filter((n) => !ans.includes(n) && q.whyWrong[String(n)]).map((n) => `(${n}) ${q.whyWrong[String(n)]}`);
+      const missed = ans.filter((n) => !response.includes(n)).map((n) => `(${n}) ยังไม่ได้เลือก — ส่วนนี้ผิด`);
+      return [...extra, ...missed].join("\n") || null;
+    }
     if (q.type === "choice-fill") {
       const parts = (response || [])
         .map((r, i) => (q.whyWrong[r] && ![q.answer[i]].flat().includes(r) ? `${r}: ${q.whyWrong[r]}` : null))

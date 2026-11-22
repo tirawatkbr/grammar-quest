@@ -53,8 +53,14 @@ export function checkAnswer(q, response) {
       const ok = [q.answer, ...(q.alsoCorrect || [])];
       return { correct: ok.includes(response) };
     }
-    case "error":
+    case "error": {
+      if (Array.isArray(q.answer)) {
+        const want = [...q.answer].map(Number).sort((a, b) => a - b).join(",");
+        const got = [...(response || [])].map(Number).sort((a, b) => a - b).join(",");
+        return { correct: want === got };
+      }
       return { correct: Number(response) === Number(q.answer) };
+    }
     case "choice-fill": {
       const per = q.answer.map((a, i) => [a].flat().includes(response?.[i]));
       return { correct: per.every(Boolean), perBlank: per };
@@ -84,7 +90,7 @@ export function isComplete(q, response) {
     case "mcq":
       return typeof response === "string" && response.length > 0;
     case "error":
-      return Number.isInteger(response);
+      return Array.isArray(q.answer) ? Array.isArray(response) && response.length > 0 : Number.isInteger(response);
     case "choice-fill":
       return Array.isArray(response) && q.answer.every((_, i) => typeof response[i] === "string");
     case "type-fill":

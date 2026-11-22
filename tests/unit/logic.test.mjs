@@ -221,3 +221,12 @@ test("rich text markup tokenizer", () => {
   ]);
   assert.equal(plain("the ___ of __x__"), "the ___ of x");
 });
+
+test("multi-part error questions", () => {
+  const q = { type: "error", answer: [1, 3] };
+  assert.ok(checkAnswer(q, [3, 1]).correct);
+  assert.ok(!checkAnswer(q, [1]).correct);
+  assert.ok(!checkAnswer(q, [1, 2, 3]).correct);
+  assert.ok(!isComplete(q, []));
+  assert.ok(isComplete(q, [2]));
+});

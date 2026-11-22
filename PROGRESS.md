@@ -15,7 +15,7 @@ Rule: the source folder `OneDrive\Desktop\M.4` is READ-ONLY (only the PDFs are r
 | Unit | Sheet ch. | Topic | Status | Sheet items | TOEIC items |
 |------|-----------|-------|--------|-------------|-------------|
 | u01 | 1 | Parts of Speech | ✅ done (validate, diff, full UI play) | 73 | 15 |
-| u02 | 2 | Noun | ⏳ | | |
+| u02 | 2 | Noun | ✅ done (validate, diff, full UI play) | 80 | 15 |
 | u03 | 3 | Article | ⏳ | | |
 | u04 | 4 | Quantifier | ⏳ | | |
 | u05 | 5 | Pronoun | ⏳ | | |

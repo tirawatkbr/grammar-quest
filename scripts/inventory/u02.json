@@ -1,0 +1,13 @@
+{
+  "chapter": 2,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.8-9).",
+  "exercises": [
+    { "ex": "1", "count": 10, "type": "incorrect irregular plurals (multi)", "pages": "3" },
+    { "ex": "2", "count": 10, "type": "incorrect uncountable nouns (multi)", "pages": "3" },
+    { "ex": "3", "count": 10, "type": "noun form from given word", "pages": "4" },
+    { "ex": "4", "count": 30, "type": "mcq", "pages": "4-7" },
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "8-9" }
+  ],
+  "toeicMin": 15
+}

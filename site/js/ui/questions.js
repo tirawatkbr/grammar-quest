@@ -242,10 +242,16 @@ export function parseSpots(s) {
 }
 
 function renderError(q, onChange) {
-  let response = null;
+  const multi = Array.isArray(q.answer);
+  let response = multi ? [] : null;
   const segs = parseSpots(q.prompt);
   const spots = segs.filter((s) => s.n);
-  const sentence = h("p", { class: "prompt spot-sentence", lang: "en", role: "radiogroup", "aria-label": "ส่วนที่ขีดเส้นใต้" });
+  const sentence = h("p", {
+    class: "prompt spot-sentence",
+    lang: "en",
+    role: multi ? "group" : "radiogroup",
+    "aria-label": multi ? "ส่วนที่ขีดเส้นใต้ (เลือกได้หลายส่วน)" : "ส่วนที่ขีดเส้นใต้",
+  });
   const buttons = [];
   let idx = 0;
   for (const s of segs) {
@@ -256,50 +262,70 @@ function renderError(q, onChange) {
     const i = idx++;
     const btn = h(
       "button",
-      { class: "spot", type: "button", role: "radio", "aria-checked": "false", tabindex: i === 0 ? "0" : "-1" },
+      multi
+        ? { class: "spot", type: "button", role: "checkbox", "aria-checked": "false" }
+        : { class: "spot", type: "button", role: "radio", "aria-checked": "false", tabindex: i === 0 ? "0" : "-1" },
       h("span", { class: "spot-num" }, `(${s.n})`),
       s.text,
     );
     btn.addEventListener("click", () => select(i));
-    btn.addEventListener("keydown", (e) => {
-      const dir = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
-      if (dir) {
-        e.preventDefault();
-        const n = (i + dir + spots.length) % spots.length;
-        select(n);
-        buttons[n].focus();
-      }
-    });
+    if (!multi) {
+      btn.addEventListener("keydown", (e) => {
+        const dir = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+        if (dir) {
+          e.preventDefault();
+          const n = (i + dir + spots.length) % spots.length;
+          select(n);
+          buttons[n].focus();
+        }
+      });
+    }
     buttons.push(btn);
     sentence.append(btn);
   }
   function select(i) {
     if (buttons[i].disabled) return;
-    response = spots[i].n;
-    buttons.forEach((b, j) => {
-      b.setAttribute("aria-checked", String(j === i));
-      b.setAttribute("tabindex", j === i ? "0" : "-1");
-    });
+    if (multi) {
+      const n = spots[i].n;
+      response = response.includes(n) ? response.filter((x) => x !== n) : [...response, n].sort((a, b) => a - b);
+      buttons[i].setAttribute("aria-checked", String(response.includes(n)));
+    } else {
+      response = spots[i].n;
+      buttons.forEach((b, j) => {
+        b.setAttribute("aria-checked", String(j === i));
+        b.setAttribute("tabindex", j === i ? "0" : "-1");
+      });
+    }
     onChange();
   }
-  const el = h("div", { class: "stack" }, contextBlock(q), sentence);
+  const el = h(
+    "div",
+    { class: "stack" },
+    contextBlock(q),
+    multi ? h("p", { class: "small muted" }, "แตะเลือกให้ครบทุกส่วนที่ผิด (อาจมีมากกว่า 1 ส่วน) แตะซ้ำเพื่อยกเลิก") : null,
+    sentence,
+  );
+  const answers = multi ? q.answer.map(Number) : [Number(q.answer)];
   return {
     el,
-    getResponse: () => response,
+    getResponse: () => (multi ? response.slice() : response),
     selectByNumber: (n) => {
       const i = spots.findIndex((s) => s.n === n);
       if (i >= 0) select(i);
     },
     focusFirst: () => buttons[0].focus(),
     showResult() {
+      const picked = multi ? response : [response];
       buttons.forEach((b, i) => {
         b.disabled = true;
-        if (spots[i].n === Number(q.answer)) {
+        const n = spots[i].n;
+        if (answers.includes(n)) {
           b.classList.add("is-correct");
-          b.append(h("span", { class: "sr-only" }, " (ส่วนที่ผิด — คำตอบที่ถูก)"));
-        } else if (spots[i].n === response) {
+          if (!picked.includes(n)) b.classList.add("is-missed");
+          b.append(h("span", { class: "sr-only" }, picked.includes(n) ? " (ส่วนที่ผิด — คุณเลือกถูก)" : " (ส่วนที่ผิด — คุณไม่ได้เลือก)"));
+        } else if (picked.includes(n)) {
           b.classList.add("is-wrong");
-          b.append(h("span", { class: "sr-only" }, " (คำตอบของคุณ)"));
+          b.append(h("span", { class: "sr-only" }, " (ส่วนนี้ถูกอยู่แล้ว — คุณเลือกผิด)"));
         }
       });
     },
@@ -418,8 +444,15 @@ export function correctAnswerText(q) {
     case "type-fill":
       return q.answer.map((a, i) => (q.answer.length > 1 ? `(${i + 1}) ` : "") + [a].flat()[0]).join("  ");
     case "error": {
-      const seg = parseSpots(q.prompt).find((s) => s.n === Number(q.answer));
-      return `(${q.answer}) ${seg ? seg.text : ""} → ${q.correction}`;
+      const segs = parseSpots(q.prompt);
+      const nums = [q.answer].flat().map(Number);
+      const fixes = [q.correction].flat();
+      return nums
+        .map((n, i) => {
+          const seg = segs.find((x) => x.n === n);
+          return `(${n}) ${seg ? seg.text : ""} → ${fixes[i] ?? fixes[0]}`;
+        })
+        .join("  ·  ");
     }
     case "order":
       return q.answer;
@@ -437,7 +470,7 @@ export function responseText(q, r) {
     case "type-fill":
       return (r || []).map((x, i) => ((r.length > 1 ? `(${i + 1}) ` : "") + (x ?? ""))).join("  ");
     case "error":
-      return r ? `(${r})` : "";
+      return Array.isArray(r) ? r.map((n) => `(${n})`).join(" ") : r ? `(${r})` : "";
     case "order":
       return (r || []).join(" ");
     default:

@@ -63,5 +63,69 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u02",
+    "chapter": 2,
+    "title": "Noun",
+    "titleTh": "คำนาม",
+    "file": "u02.js",
+    "summaryCount": 6,
+    "lessons": [
+      {
+        "id": "u02-l1",
+        "title": "พหูพจน์ที่ผิด (irregular plurals)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l2",
+        "title": "นามนับไม่ได้ที่ใช้ผิด",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l3",
+        "title": "เติมคำนามจากคำที่ให้",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l4",
+        "title": "เลือกคำนามที่ถูกต้อง (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l5",
+        "title": "เลือกคำนามที่ถูกต้อง (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l6",
+        "title": "เลือกคำนามที่ถูกต้อง (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l7",
+        "title": "พหูพจน์ นับไม่ได้ และ 's (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l8",
+        "title": "พหูพจน์ นับไม่ได้ และ 's (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u02-l9",
+        "title": "แนวข้อสอบ TOEIC: คำนาม",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

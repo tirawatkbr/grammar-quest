@@ -208,7 +208,7 @@ export default unit({
           explain: "you ใช้แทนตัวผู้ฟัง และเป็นกรรมของ expect (expect + somebody + to V) จึงเป็น **pronoun**",
           whyWrong: {
             a: "you ไม่ใช่ชื่อเรียก แต่เป็นคำที่ใช้แทนผู้ฟัง",
-            c: "you ไม่ได้ขยายนามใด",
+            c: "you ไม่ได้ขยายนามใด แต่เป็นกรรมของกริยา expect",
             d: "you ไม่ได้เชื่อมนามกับคำอื่น แต่เป็นกรรมของกริยา expect",
           },
         },
@@ -242,7 +242,7 @@ export default unit({
           explain: "but เชื่อมสองประโยคที่มีความหมายขัดแย้งกัน (We have invited the boss / he may decide not to come) จึงเป็น **conjunction**",
           whyWrong: {
             a: "but ไม่ได้บอกการกระทำ",
-            b: "but ไม่ได้ขยายนามใด",
+            b: "but ไม่ได้ขยายนามใด แต่เชื่อมสองประโยคเข้าด้วยกัน",
             c: "preposition ต้องตามด้วยนาม แต่หลัง but เป็นประโยคเต็ม (he may decide…)",
           },
         },
@@ -266,7 +266,7 @@ export default unit({
           explain: "Oh เป็นคำอุทานที่ผู้พูดใช้เมื่อนึกขึ้นได้ ขึ้นต้นประโยคและคั่นด้วยจุลภาค จึงเป็น **interjection**",
           whyWrong: {
             a: "Oh ไม่ได้ขยายกริยาใด",
-            b: "Oh ไม่ได้ใช้แทนนาม",
+            b: "Oh ไม่ได้ใช้แทนนามใด เป็นเพียงเสียงอุทานแสดงความรู้สึก",
             c: "คำที่เชื่อมคือ and ส่วน Oh เป็นคำแสดงความรู้สึก",
           },
         },
@@ -302,7 +302,7 @@ export default unit({
           explain: "English วางหน้านาม language เพื่อบอกว่าเป็นภาษาอะไร จึงทำหน้าที่ **adjective** (เหมือน American writer ในการ์ดสรุป) — ถ้าใช้ลอย ๆ เช่น I study English. จะเป็น noun",
           whyWrong: {
             a: "English เป็นนามได้ แต่ในประโยคนี้วางหน้านาม language เพื่อขยาย จึงทำหน้าที่คุณศัพท์",
-            b: "adverb ไม่ขยายนาม",
+            b: "adverb ไม่ขยายนาม แต่ English ในประโยคนี้วางหน้านาม language",
             d: "English ไม่ได้มีนามตามเพื่อแสดงความสัมพันธ์แบบบุพบท",
           },
         },
@@ -638,7 +638,7 @@ export default unit({
           explain: "try to + **verb** → contribute เป็นกริยา\nas much as possible (มากที่สุดเท่าที่เป็นไปได้) → possible เป็น **adjective** (-ible)",
           whyWrong: {
             a: "contribute อยู่หลัง to จึงเป็นกริยา ไม่ใช่นาม (นามคือ contribution)",
-            c: "ทั้งสองคำไม่ใช่นาม",
+            c: "ทั้งสองคำไม่ใช่นาม: contribute อยู่หลัง to (กริยา) และ possible เป็นคุณศัพท์",
             d: "possible เป็นคุณศัพท์ (นามคือ possibility)",
           },
         },

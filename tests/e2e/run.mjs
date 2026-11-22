@@ -98,8 +98,14 @@ async function answer(page, correct = true) {
       break;
     }
     case "error": {
-      const n = correct ? Number(q.answer) : Number(q.answer) === 1 ? 2 : 1;
-      await page.locator(".spot", { hasText: `(${n})` }).first().click();
+      const ans = [q.answer].flat().map(Number);
+      let picks = ans;
+      if (!correct) {
+        const total = await page.locator(".spot").count();
+        const other = [...Array(total)].map((_, i) => i + 1).find((n) => !ans.includes(n));
+        picks = other ? [other] : ans.slice(0, Math.max(1, ans.length - 1));
+      }
+      for (const n of picks) await page.locator(".spot", { hasText: `(${n})` }).first().click();
       break;
     }
     case "order": {

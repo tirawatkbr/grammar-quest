@@ -27,9 +27,10 @@ function checkText(where, s) {
     if (m && !/\{_\}\s[,.;:!?]/.test(m[0]) && !/—\s[,.]/.test(m[0])) err(where, `space before punctuation: "${m[0]}"`);
   }
   // balanced pairs
+  const noMarkers = s.replace(/(^|\n)\s*\d{1,2}\)/g, "$1"); // list markers like "1)" at line start
   for (const [o, c] of [["(", ")"], ["[", "]"], ["“", "”"]]) {
-    const a = s.split(o).length - 1;
-    const b = s.split(c).length - 1;
+    const a = noMarkers.split(o).length - 1;
+    const b = noMarkers.split(c).length - 1;
     if (a !== b) err(where, `unbalanced ${o}${c} (${a} vs ${b})`);
   }
   for (const mk of ["**", "=="]) if ((s.split(mk).length - 1) % 2) err(where, `unbalanced markup ${mk}`);
@@ -161,7 +162,7 @@ for (const { file, unit } of units) {
           const okKeys = [q.answer, ...(q.alsoCorrect || [])];
           for (const k of keys) {
             if (okKeys.includes(k)) continue;
-            if (!q.whyWrong?.[k] || plain(q.whyWrong[k]).length < 12) err(Q, `whyWrong.${k} missing/short`);
+            if (!q.whyWrong?.[k] || plain(q.whyWrong[k]).length < 20) err(Q, `whyWrong.${k} missing/short (<20)`);
           }
           for (const k of Object.keys(q.whyWrong || {})) if (!keys.includes(k) || okKeys.includes(k)) err(Q, `whyWrong.${k} not a wrong choice`);
           if (blanks > 1) err(Q, "mcq prompt has more than one blank");
@@ -188,12 +189,15 @@ for (const { file, unit } of units) {
         case "error": {
           const spots = parseSpots(q.prompt).filter((s) => s.n);
           const nums = spots.map((s) => s.n);
-          if (spots.length < 2) err(Q, "error question needs ≥2 parts");
+          const multi = Array.isArray(q.answer);
+          const ans = [q.answer].flat().map(Number);
+          if (spots.length < (multi ? 1 : 2)) err(Q, "error question needs ≥2 parts (or multi)");
           nums.forEach((n, i) => n !== i + 1 && err(Q, `parts must be numbered 1..k in order (got ${nums.join(",")})`));
-          if (!nums.includes(Number(q.answer))) err(Q, `answer ${q.answer} not a part`);
-          if (!q.correction) err(Q, "missing correction");
+          for (const a of ans) if (!nums.includes(a)) err(Q, `answer ${a} not a part`);
+          if (new Set(ans).size !== ans.length || !ans.length) err(Q, "answer parts must be unique and non-empty");
+          if (!q.correction || (multi && (!Array.isArray(q.correction) || q.correction.length !== ans.length))) err(Q, "missing correction (multi: one per answer part)");
           if (blanks) err(Q, "error prompt must not contain {_}");
-          for (const k of Object.keys(q.whyWrong || {})) if (!nums.includes(Number(k)) || Number(k) === Number(q.answer)) err(Q, `whyWrong.${k} invalid`);
+          for (const k of Object.keys(q.whyWrong || {})) if (!nums.includes(Number(k)) || ans.includes(Number(k))) err(Q, `whyWrong.${k} invalid`);
           break;
         }
         case "order": {
@@ -220,10 +224,18 @@ for (const { file, unit } of units) {
       }
       // text checks
       walkStrings(q, Q, checkText);
-      for (const k of ["prompt", "context", "choices", "options", "correction", "accept", "distractors"]) {
+      for (const k of ["context", "options", "correction", "accept"]) {
         walkStrings(q[k], `${Q}.${k}`, checkEnglish);
       }
-      walkStrings(q.answer, `${Q}.answer`, (w, s) => (q.type === "mcq" ? null : checkEnglish(w, s)));
+      // error questions: the parts that ARE the errors may be deliberately misspelled ("sheeps")
+      const promptForSpell =
+        q.type === "error"
+          ? String(q.prompt).replace(/\[(\d)\|([^\]]+)\]/g, (m, n, t) => ([q.answer].flat().map(Number).includes(Number(n)) ? " " : t))
+          : q.prompt;
+      checkEnglish(`${Q}.prompt`, promptForSpell);
+      // wrong choices may be deliberately misspelled (e.g. "informations"); spell-check the correct ones only
+      if (q.type === "mcq") for (const k of [q.answer, ...(q.alsoCorrect || [])]) checkEnglish(`${Q}.choices.${k}`, q.choices?.[LETTERS.indexOf(k)]);
+      walkStrings(q.answer, `${Q}.answer`, (w, s) => (q.type === "mcq" || q.type === "error" ? null : checkEnglish(w, s)));
     });
   });
   walkStrings(unit.summary, `${U}.summary`, checkText);

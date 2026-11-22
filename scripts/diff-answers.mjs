@@ -39,7 +39,7 @@ for (const { unit } of units) {
           same = [q.answer, ...(q.alsoCorrect || [])].includes(String(mine));
           break;
         case "error":
-          same = Number(mine) === Number(q.answer);
+          same = [q.answer].flat().map(Number).sort().join(",") === String(mine).split(",").map((x) => Number(x.trim())).sort().join(",");
           break;
         case "choice-fill":
         case "type-fill": {

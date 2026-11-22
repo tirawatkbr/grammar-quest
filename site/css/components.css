@@ -637,6 +637,11 @@ textarea.input {
   color: var(--success);
 }
 
+.spot.is-missed {
+  background: transparent;
+  border-bottom-style: dashed;
+}
+
 .spot.is-wrong {
   background: var(--danger-soft);
   border-bottom-color: var(--danger);
