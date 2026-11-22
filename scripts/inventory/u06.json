@@ -1,0 +1,13 @@
+{
+  "chapter": 6,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3-4). Ex.2 texts: items are the underlined verbs, numbered in reading order (Text A 12, Text B 11); each text has 6 errors.",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 40, "type": "is/are", "pages": "5" },
+    { "ex": "2A", "count": 12, "type": "underlined verbs, 6 errors", "pages": "6" },
+    { "ex": "2B", "count": 11, "type": "underlined verbs, 6 errors", "pages": "6" },
+    { "ex": "3", "count": 30, "type": "mcq", "pages": "7-9" }
+  ],
+  "toeicMin": 15
+}

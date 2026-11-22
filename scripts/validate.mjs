@@ -153,7 +153,12 @@ for (const { file, unit } of units) {
           if (!refCount.has(m[1])) refCount.set(m[1], []);
           const nums = m[2].split(",").map(Number);
           refCount.get(m[1]).push(...nums);
-          const blanksHere = q.type === "choice-fill" || q.type === "type-fill" ? q.answer.length : 1;
+          const blanksHere =
+            q.type === "choice-fill" || q.type === "type-fill"
+              ? q.answer.length
+              : q.type === "error"
+                ? parseSpots(q.prompt).filter((x) => x.n).length
+                : 1;
           if (nums.length > 1 && nums.length !== blanksHere) err(Q, `ref lists ${nums.length} items but question has ${blanksHere} blanks`);
         }
       }

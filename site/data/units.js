@@ -337,5 +337,81 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u06",
+    "chapter": 6,
+    "title": "Subject-Verb Agreement",
+    "titleTh": "ความสอดคล้องของประธานและกริยา",
+    "file": "u06.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u06-l1",
+        "title": "เลือกกริยาให้สอดคล้อง (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u06-l2",
+        "title": "เลือกกริยาให้สอดคล้อง (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u06-l3",
+        "title": "is หรือ are (1)",
+        "kind": "sheet",
+        "count": 14
+      },
+      {
+        "id": "u06-l4",
+        "title": "is หรือ are (2)",
+        "kind": "sheet",
+        "count": 13
+      },
+      {
+        "id": "u06-l5",
+        "title": "is หรือ are (3)",
+        "kind": "sheet",
+        "count": 13
+      },
+      {
+        "id": "u06-l6",
+        "title": "บทความ A: หาและแก้กริยาที่ผิด (allergy)",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u06-l7",
+        "title": "บทความ B: หาและแก้กริยาที่ผิด (theater)",
+        "kind": "sheet",
+        "count": 6
+      },
+      {
+        "id": "u06-l8",
+        "title": "เลือกคำตอบ Subject-Verb Agreement (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u06-l9",
+        "title": "เลือกคำตอบ Subject-Verb Agreement (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u06-l10",
+        "title": "เลือกคำตอบ Subject-Verb Agreement (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u06-l11",
+        "title": "แนวข้อสอบ TOEIC: Subject-Verb Agreement",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

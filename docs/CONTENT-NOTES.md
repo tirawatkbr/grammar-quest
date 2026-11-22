@@ -52,3 +52,10 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
   Gender-unspecified persons accept he/she, he or she, she/he (him/her likewise); spaces around "/" are ignored.
 - Ex.2 #4 first blank accepts "her own" and "her".
 - Ex.3 accepts both -one/-body forms (nobody / no one, anyone / anybody, everybody / everyone).
+
+## Unit 6 — Subject-Verb Agreement (sheet chapter 6)
+- Ex.0 (20), Ex.1 (40), Ex.2 Text A (12 underlined verbs, 6 errors), Text B (11 underlined verbs, 6 errors), Ex.3 (30).
+- Ex.2 texts are split into sentence groups (multi-select). Sentences without an error are merged into a
+  neighbouring group so every question has at least one error; refs list the underlined verbs it covers.
+- Ex.3 #2 / #11 follow the sheet's formal agreement (Each … his, anyone … he); the explanation notes this.
+- Ex.3 #21: the sheet's typo "perfom" → "perform".
