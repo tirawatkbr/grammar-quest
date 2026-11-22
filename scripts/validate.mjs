@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { loadUnits, root, splitBlanks, parseSpots, UNIT_ORDER } from "./lib.mjs";
+import { orderTokens, chipWord, normalizeOrder } from "../site/js/check.js";
 
 const errors = [];
 const warnings = [];
@@ -216,21 +217,24 @@ for (const { file, unit } of units) {
         }
         case "order": {
           if (typeof q.answer !== "string" || q.answer.trim().split(/\s+/).length < 3) err(Q, "order answer too short");
+          const chips = orderTokens(q).map((w) => w.toLowerCase());
+          const seen = new Set([normalizeOrder(q.answer)]);
           for (const a of q.accept || []) {
-            const t1 = a.trim().split(/\s+/).sort().join(" ");
-            const t2 = [...q.answer.trim().split(/\s+/), ...(q.distractors || [])];
-            // every accepted variant must be buildable from the chips
-            const pool = [...t2];
-            for (const w of a.trim().split(/\s+/)) {
-              const i = pool.indexOf(w);
+            // every accepted variant must be buildable from the chips (case/punctuation-insensitive)
+            const pool = [...chips];
+            for (const w of a.trim().split(/\s+/).map(chipWord).filter(Boolean)) {
+              const i = pool.indexOf(w.toLowerCase());
               if (i < 0) {
                 err(Q, `accept variant uses "${w}" which is not a chip`);
                 break;
               }
               pool.splice(i, 1);
             }
-            if (t1 === q.answer.trim().split(/\s+/).sort().join(" ") && a.trim() === q.answer.trim()) err(Q, "accept duplicates answer");
+            const n = normalizeOrder(a);
+            if (seen.has(n)) err(Q, "accept duplicates answer/another variant");
+            seen.add(n);
           }
+          for (const d of q.distractors || []) if (!d.trim()) err(Q, "empty distractor");
           break;
         }
         default:

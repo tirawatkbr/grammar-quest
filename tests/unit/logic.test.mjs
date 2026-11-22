@@ -1,7 +1,7 @@
 // Unit tests for pure logic. Run: node --test tests/unit
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { normalize, matchesAny, checkAnswer, isComplete } from "../../site/js/check.js";
+import { normalize, matchesAny, checkAnswer, isComplete, orderTokens } from "../../site/js/check.js";
 import {
   newState, migrate, levelInfo, xpForLevel, heartsNow, loseHeart, gainHeart, HEART_REGEN_MS, MAX_HEARTS,
   addXp, recordActivity, streakNow, recordAnswer, reviewDue, reviewAll, completeLesson,
@@ -44,7 +44,9 @@ test("checkAnswer per type", () => {
   const tf = checkAnswer({ type: "type-fill", answer: [["success"], ["noun", "n"]] }, ["Success", "N"]);
   assert.ok(tf.correct);
   assert.ok(checkAnswer({ type: "order", answer: "If I were you, I would go.", accept: ["I would go if I were you."] }, "I would go if I were you.".split(" ")).correct);
-  assert.ok(!checkAnswer({ type: "order", answer: "I am here." }, ["here", "I", "am."]).correct);
+  assert.ok(!checkAnswer({ type: "order", answer: "I am here." }, ["here", "I", "am"]).correct);
+  // case and punctuation do not matter for word order
+  assert.ok(checkAnswer({ type: "order", answer: "As soon as he is here, we will eat." }, "as soon as he is here we will eat".split(" ")).correct);
 });
 
 test("isComplete", () => {
@@ -229,4 +231,10 @@ test("multi-part error questions", () => {
   assert.ok(!checkAnswer(q, [1, 2, 3]).correct);
   assert.ok(!isComplete(q, []));
   assert.ok(isComplete(q, [2]));
+});
+
+test("order chips: no punctuation, first word lower-cased, distractors appended", () => {
+  assert.deepEqual(orderTokens({ answer: "As soon as he is here, we will eat.", distractors: ["will"] }), ["as", "soon", "as", "he", "is", "here", "we", "will", "eat", "will"]);
+  assert.deepEqual(orderTokens({ answer: "I will go." }), ["I", "will", "go"]);
+  assert.deepEqual(orderTokens({ answer: "Henry left.", keepFirstCase: true }), ["Henry", "left"]);
 });

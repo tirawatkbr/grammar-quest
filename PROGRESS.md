@@ -22,7 +22,7 @@ Rule: the source folder `OneDrive\Desktop\M.4` is READ-ONLY (only the PDFs are r
 | u06 | 6 | Subject-Verb Agreement | ✅ done (validate, diff, full UI play) | 113 | 15 |
 | u07 | 7 | Present Tenses | ✅ done (validate, diff, full UI play) | 75 items | 15 |
 | u08 | 8 | Past Tenses | ✅ done (validate, diff, full UI play) | 75 items | 15 |
-| u09 | 9 | Future Tenses | ⏳ | | |
+| u09 | 9 | Future Tenses | ✅ done (validate, diff, full UI play) | 71 items | 15 |
 | u10 | 10 | Passive Voice | ⏳ | | |
 | u11 | 11 | Conditional Sentence | ⏳ | | |
 | u12 | 12 | Non-finite Verb | ⏳ | | |
@@ -42,3 +42,7 @@ Rule: the source folder `OneDrive\Desktop\M.4` is READ-ONLY (only the PDFs are r
 - Underline markup `__x__` only matches exactly two underscores, so "___" can be used for blanks in explanations.
 - First page load keeps natural focus (Tab → skip link); route changes move focus to the h1.
 - Tables in summary cards stack into labelled rows below 600px (no horizontal scrolling).
+
+## Stopped here (usage limit) — next steps
+- Units u10 Passive (ch10), u11 Conditional (ch11), u12 Non-finite (ch12), u13 Modal (ch13), u14 Preposition (ch18): follow the per-unit checklist.
+- Then Phase 5: full e2e + axe run, screenshots review at 375/1280 light/dark, write docs/A11Y-AUDIT.md.

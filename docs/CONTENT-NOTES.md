@@ -74,3 +74,8 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.2 #2 accepts had already got / gotten / been infected; British/American spellings accepted (realised, learnt, recognised).
 - Ex.2 #8 keeps the sheet's wording "go through with her again".
 - Ex.3 #10: sheet "oceanliner" → "ocean liner".
+
+## Unit 9 — Future Tenses (sheet chapter 9)
+- Ex.0 (20), Ex.1 (5), Ex.2 (6 combine-sentence items as word-order questions with distractor words), Ex.3 (10), Ex.4 (30).
+- Word-order checking ignores case and punctuation; chips carry no punctuation and the first word is lower-cased.
+- Ex.0 #16 accepts will be seeing / is seeing.

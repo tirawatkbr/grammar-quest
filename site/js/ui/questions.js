@@ -2,7 +2,7 @@
 //   { el, getResponse(), isComplete(), showResult(result, response), selectByNumber(n), focusFirst() }
 import { h, rich, splitBlanks, shuffle, LETTERS, plain } from "../util.js";
 import { icon } from "./icon.js";
-import { isComplete as complete } from "../check.js";
+import { isComplete as complete, orderTokens } from "../check.js";
 
 export const TYPE_INSTRUCTION = {
   mcq: "เลือกคำตอบที่ถูกต้อง",
@@ -345,8 +345,7 @@ function renderError(q, onChange) {
 
 // ---------------- order (word bank) ----------------
 function renderOrder(q, onChange) {
-  const words = String(q.answer).trim().split(/\s+/);
-  const pool = shuffle([...words, ...(q.distractors || [])].map((w, i) => ({ w, i })));
+  const pool = shuffle(orderTokens(q).map((w, i) => ({ w, i })));
   const chosen = [];
   const answerBox = h("div", {
     class: "order-answer",

@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { loadUnits, root } from "./lib.mjs";
-import { normalize, matchesAny } from "../site/js/check.js";
+import { normalize, matchesAny, normalizeOrder } from "../site/js/check.js";
 
 const want = process.argv.slice(2);
 const units = await loadUnits();
@@ -48,7 +48,7 @@ for (const { unit } of units) {
           break;
         }
         case "order":
-          same = [q.answer, ...(q.accept || [])].some((a) => normalize(a) === normalize(mine));
+          same = [q.answer, ...(q.accept || [])].some((a) => normalizeOrder(a) === normalizeOrder(mine));
           break;
       }
       checked++;

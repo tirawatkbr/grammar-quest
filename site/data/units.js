@@ -541,5 +541,69 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u09",
+    "chapter": 9,
+    "title": "Future Tenses",
+    "titleTh": "เหตุการณ์ในอนาคต",
+    "file": "u09.js",
+    "summaryCount": 6,
+    "lessons": [
+      {
+        "id": "u09-l1",
+        "title": "เลือก Future Tense (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u09-l2",
+        "title": "เลือก Future Tense (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u09-l3",
+        "title": "will หรือ be going to",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u09-l4",
+        "title": "รวมสองประโยคด้วยคำเชื่อมเวลา",
+        "kind": "sheet",
+        "count": 6
+      },
+      {
+        "id": "u09-l5",
+        "title": "เลือก future tense ให้เหมาะ",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u09-l6",
+        "title": "เลือกคำตอบ Future Tenses (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u09-l7",
+        "title": "เลือกคำตอบ Future Tenses (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u09-l8",
+        "title": "เลือกคำตอบ Future Tenses (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u09-l9",
+        "title": "แนวข้อสอบ TOEIC: Future Tenses",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

@@ -26,6 +26,7 @@ for (const u of UNITS) unitData[u.id] = (await import(pathToFileURL(path.join(RO
 const qById = new Map();
 for (const u of Object.values(unitData)) for (const l of u.lessons) for (const q of l.questions) qById.set(q.id, q);
 const LETTERS = ["a", "b", "c", "d", "e"];
+const { orderTokens: orderTokensNode } = await import(pathToFileURL(path.join(ROOT, "site/js/check.js")).href);
 
 let failures = 0;
 let passes = 0;
@@ -109,7 +110,7 @@ async function answer(page, correct = true) {
       break;
     }
     case "order": {
-      const words = q.answer.trim().split(/\s+/);
+      const words = orderTokensNode(q).slice(0, q.answer.trim().split(/\s+/).length);
       if (!correct) words.reverse();
       for (const w of words) {
         await page

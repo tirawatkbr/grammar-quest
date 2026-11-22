@@ -71,8 +71,8 @@ export function checkAnswer(q, response) {
       return { correct: per.every(Boolean), perBlank: per };
     }
     case "order": {
-      const built = normalize((response || []).join(" "));
-      const ok = [q.answer, ...(q.accept || [])].some((a) => normalize(a) === built);
+      const built = normalizeOrder((response || []).join(" "));
+      const ok = [q.answer, ...(q.accept || [])].some((a) => normalizeOrder(a) === built);
       return { correct: ok };
     }
     default:
@@ -80,9 +80,27 @@ export function checkAnswer(q, response) {
   }
 }
 
-/** Tokens for an order question: words of the main answer (punctuation kept on words). */
+/** Word-order comparison ignores case and punctuation (chips carry no punctuation). */
+export function normalizeOrder(s) {
+  return normalize(String(s ?? "").replace(/[.,!?;:\u201c\u201d"]/g, " "));
+}
+
+/** Strip punctuation around a word (keeps inner apostrophes/hyphens). */
+export function chipWord(w) {
+  return String(w).replace(/^[\u201c"(]+|[.,!?;:\u201d")]+$/g, "");
+}
+
+/**
+ * Chips for an order question: words of the main answer without punctuation, plus distractors.
+ * The first word is lower-cased (so capitalisation does not give away the start) unless it is "I"
+ * or q.keepFirstCase is set (proper noun).
+ */
 export function orderTokens(q) {
-  return String(q.answer).trim().split(/\s+/);
+  const words = String(q.answer).trim().split(/\s+/).map(chipWord).filter(Boolean);
+  if (words.length && !q.keepFirstCase && words[0] !== "I" && !/^I'/.test(words[0])) {
+    words[0] = words[0].charAt(0).toLowerCase() + words[0].slice(1);
+  }
+  return [...words, ...(q.distractors || []).map(chipWord)];
 }
 
 /** Has the learner given a complete response (enables the Check button)? */
