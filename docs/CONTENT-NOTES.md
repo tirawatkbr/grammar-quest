@@ -66,3 +66,11 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.1 #3: sheet typo "umbreaella" → "umbrella".
 - Ex.0 #11 accepts *agree* (stative, present state) and *have agreed* (just reached agreement).
 - Ex.2 #4 accepts have been suffering / have suffered; #6 accepts have been running / have run and have gained / gained.
+
+## Unit 8 — Past Tenses (sheet chapter 8)
+- Ex.0 (20), Ex.1 (10), Ex.2 (15 items; #15 is a 10-blank paragraph), Ex.3 (30) — all included.
+- Ex.0 #2 ("My friends usually ___ in the park"): no present-simple option; *walked* (past habit) is the only workable choice.
+- Ex.1 #9 accepts was taking / took; #10 accepts was distracting / distracted.
+- Ex.2 #2 accepts had already got / gotten / been infected; British/American spellings accepted (realised, learnt, recognised).
+- Ex.2 #8 keeps the sheet's wording "go through with her again".
+- Ex.3 #10: sheet "oceanliner" → "ocean liner".

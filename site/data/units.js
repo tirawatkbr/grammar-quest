@@ -477,5 +477,69 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u08",
+    "chapter": 8,
+    "title": "Past Tenses",
+    "titleTh": "เหตุการณ์ในอดีต",
+    "file": "u08.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u08-l1",
+        "title": "เลือก Past Tense (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u08-l2",
+        "title": "เลือก Past Tense (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u08-l3",
+        "title": "Past Simple หรือ Past Continuous",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u08-l4",
+        "title": "Past Simple หรือ Past Perfect (1)",
+        "kind": "sheet",
+        "count": 8
+      },
+      {
+        "id": "u08-l5",
+        "title": "Past Simple หรือ Past Perfect (2)",
+        "kind": "sheet",
+        "count": 7
+      },
+      {
+        "id": "u08-l6",
+        "title": "เลือกคำตอบ Past Tenses (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u08-l7",
+        "title": "เลือกคำตอบ Past Tenses (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u08-l8",
+        "title": "เลือกคำตอบ Past Tenses (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u08-l9",
+        "title": "แนวข้อสอบ TOEIC: Past Tenses",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];
