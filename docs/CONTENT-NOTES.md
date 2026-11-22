@@ -59,3 +59,10 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
   neighbouring group so every question has at least one error; refs list the underlined verbs it covers.
 - Ex.3 #2 / #11 follow the sheet's formal agreement (Each … his, anyone … he); the explanation notes this.
 - Ex.3 #21: the sheet's typo "perfom" → "perform".
+
+## Unit 7 — Present Tenses (sheet chapter 7)
+- Ex.0 (20), Ex.1 (5 dialogues, 23 blanks), Ex.2 (10 items, 21 blanks), Ex.3 (10), Ex.4 (30) — all included.
+- Ex.1: question words that split the verb ("What ___ you (do) ___") are separate blanks (auxiliary + main verb).
+- Ex.1 #3: sheet typo "umbreaella" → "umbrella".
+- Ex.0 #11 accepts *agree* (stative, present state) and *have agreed* (just reached agreement).
+- Ex.2 #4 accepts have been suffering / have suffered; #6 accepts have been running / have run and have gained / gained.

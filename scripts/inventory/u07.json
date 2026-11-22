@@ -1,0 +1,13 @@
+{
+  "chapter": 7,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3-4).",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 5, "type": "dialogues, present simple / continuous", "pages": "5" },
+    { "ex": "2", "count": 10, "type": "present perfect / perfect continuous", "pages": "5-6" },
+    { "ex": "3", "count": 10, "type": "since / for", "pages": "6" },
+    { "ex": "4", "count": 30, "type": "mcq", "pages": "6-9" }
+  ],
+  "toeicMin": 15
+}

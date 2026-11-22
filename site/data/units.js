@@ -413,5 +413,69 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u07",
+    "chapter": 7,
+    "title": "Present Tenses",
+    "titleTh": "เหตุการณ์ในปัจจุบัน",
+    "file": "u07.js",
+    "summaryCount": 6,
+    "lessons": [
+      {
+        "id": "u07-l1",
+        "title": "เลือก Present Tense (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l2",
+        "title": "เลือก Present Tense (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l3",
+        "title": "Present Simple หรือ Present Continuous",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u07-l4",
+        "title": "Present Perfect หรือ Present Perfect Continuous",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l5",
+        "title": "since หรือ for",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l6",
+        "title": "เลือกคำตอบ Present Tenses (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l7",
+        "title": "เลือกคำตอบ Present Tenses (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l8",
+        "title": "เลือกคำตอบ Present Tenses (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u07-l9",
+        "title": "แนวข้อสอบ TOEIC: Present Tenses",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];
