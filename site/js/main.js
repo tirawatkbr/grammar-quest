@@ -120,9 +120,12 @@ function registerSW() {
       });
     });
   });
+  // Reload only when a new version replaces an old one (user pressed "อัปเดต").
+  // On a first visit clients.claim() also fires controllerchange; reloading then would interrupt the learner.
+  const hadController = !!navigator.serviceWorker.controller;
   let reloaded = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => {
-    if (reloaded) return;
+    if (!hadController || reloaded) return;
     reloaded = true;
     location.reload();
   });

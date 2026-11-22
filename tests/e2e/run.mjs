@@ -299,6 +299,8 @@ const tests = {
 
   async offline(browser) {
     const { ctx, page } = await newPage(browser, { sw: true });
+    let navs = 0;
+    page.on("framenavigated", (f) => { if (f === page.mainFrame()) navs++; });
     await page.goto(BASE);
     await page.waitForSelector("h1");
     await page.evaluate(async () => {
@@ -307,6 +309,7 @@ const tests = {
       for (let i = 0; i < 100 && !(await caches.keys()).length; i++) await new Promise((r) => setTimeout(r, 100));
     });
     await page.waitForTimeout(1500);
+    ok("first visit does not reload when the service worker takes control", navs === 1, `navigations=${navs}`);
     await ctx.setOffline(true);
     const p2 = await ctx.newPage();
     await p2.goto(BASE + "#/unit/u01");
