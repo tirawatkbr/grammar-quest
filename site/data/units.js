@@ -675,5 +675,81 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u11",
+    "chapter": 11,
+    "title": "Conditional Sentence",
+    "titleTh": "ประโยคเงื่อนไข",
+    "file": "u11.js",
+    "summaryCount": 6,
+    "lessons": [
+      {
+        "id": "u11-l1",
+        "title": "เลือกรูปเงื่อนไข (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u11-l2",
+        "title": "เลือกรูปเงื่อนไข (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u11-l3",
+        "title": "จับคู่ประโยคเงื่อนไข",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u11-l4",
+        "title": "ผันกริยาในประโยคเงื่อนไข (1)",
+        "kind": "sheet",
+        "count": 8
+      },
+      {
+        "id": "u11-l5",
+        "title": "ผันกริยาในประโยคเงื่อนไข (2)",
+        "kind": "sheet",
+        "count": 7
+      },
+      {
+        "id": "u11-l6",
+        "title": "เขียนประโยคใหม่ให้ความหมายเดิม (1)",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u11-l7",
+        "title": "เขียนประโยคใหม่ให้ความหมายเดิม (2)",
+        "kind": "sheet",
+        "count": 5
+      },
+      {
+        "id": "u11-l8",
+        "title": "เลือกคำตอบ Conditional (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u11-l9",
+        "title": "เลือกคำตอบ Conditional (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u11-l10",
+        "title": "เลือกคำตอบ Conditional (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u11-l11",
+        "title": "แนวข้อสอบ TOEIC: Conditional",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

@@ -1,0 +1,13 @@
+{
+  "chapter": 11,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3-4).",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 10, "type": "match halves", "pages": "5" },
+    { "ex": "2", "count": 15, "type": "verbs in conditionals", "pages": "5-6" },
+    { "ex": "3", "count": 10, "type": "rewrite with given start", "pages": "6-7" },
+    { "ex": "4", "count": 30, "type": "mcq", "pages": "7-9" }
+  ],
+  "toeicMin": 15
+}

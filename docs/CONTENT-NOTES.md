@@ -86,3 +86,9 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
   an informative by-phrase and with different phrase order are accepted.
 - Ex.0 #3: the only passive option is "is being watched" (the natural "is watched" is not offered).
 - Ex.3 #5: sheet "Atamaca" → "Atacama" (the desert's real name).
+
+## Unit 11 — Conditional Sentence (sheet chapter 11)
+- Ex.0 (20), Ex.1 (10 matches), Ex.2 (15), Ex.3 (10 rewrites as word-order questions), Ex.4 (30) — all included.
+- Ex.1: each sentence start is a question; the 10 endings are the chips (each used once in the sheet).
+- Ex.2 #2 accepts weren't / wasn't; #6 had been driving / had driven; #7 were / was; #15 would have been sitting / would have sat.
+- Ex.4 #19: the sheet labels two options "b."; the third option is shown as "c" (I would if I could).
