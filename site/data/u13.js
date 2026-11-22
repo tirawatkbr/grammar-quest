@@ -177,13 +177,13 @@ export default unit({
       questions: [
         {
           n: [1, 2, 3, 4], type: "type-fill", summaryRef: 4,
-          prompt: "Text A\nAs children, they (1) {_} to spend a lot of time together. They (2) {_} go for long bike rides along the coast until they reached the cave. Once there, they (3) {_} able to explore it to the heart's content, as no one else knew about this secret hideaway. They felt they (4) {_} to keep this place to themselves no matter what.",
+          prompt: "Text A\nAs children, they {_} to spend a lot of time together. They {_} go for long bike rides along the coast until they reached the cave. Once there, they {_} able to explore it to the heart's content, as no one else knew about this secret hideaway. They felt they {_} to keep this place to themselves no matter what.",
           answer: [["used"], ["would", "used to"], ["were"], ["had", "needed", "ought"]],
           explain: "(1) **used** to = เคยทำเป็นประจำในอดีต\n(2) **would** = นิสัยในอดีต (= used to)\n(3) **were** able to = สามารถทำได้ (ในอดีต)\n(4) **had** to = ต้อง (อดีตของ must)",
         },
         {
           n: [5, 6, 7, 8, 9, 10, 11], type: "type-fill", summaryRef: 4, ex: "1",
-          prompt: "Text B\nI'm worried about John. He hasn't been well lately. Yesterday, he was pale and he (1) {_} have been feeling sick, as he (2) {_} not eat a thing. I think he (3) {_} better see a doctor, as he (4) {_} have some serious illness he's not aware of. Of course, it (5) {_} just be a virus. To be on the safe side, though, I (6) {_} drop by his house later and tell him that he (7) {_} do something about it immediately.",
+          prompt: "Text B\nI'm worried about John. He hasn't been well lately. Yesterday, he was pale and he {_} have been feeling sick, as he {_} not eat a thing. I think he {_} better see a doctor, as he {_} have some serious illness he's not aware of. Of course, it {_} just be a virus. To be on the safe side, though, I {_} drop by his house later and tell him that he {_} do something about it immediately.",
           answer: [["must"], ["could", "would", "did"], ["had"], ["may", "might", "could"], ["may", "might", "could"], ["will", "shall", "might", "may"], ["must", "should"]],
           explain: "(1) **must** have been = คงจะ…แน่ (คาดเดาอดีตแบบมั่นใจ)\n(2) **could** not eat = กินไม่ได้เลย\n(3) **had** better = ควรจะ (คำแนะนำ)\n(4) **may / might** = อาจจะมีโรค\n(5) **may / might** = อาจจะเป็นแค่ไวรัส\n(6) **will** drop by = ตัดสินใจว่าจะแวะไป\n(7) **must / should** = ต้อง/ควรทำบางอย่าง",
         },
@@ -198,13 +198,13 @@ export default unit({
       questions: [
         {
           n: [12, 13, 14, 15, 16], type: "type-fill", summaryRef: 3,
-          prompt: "Text C\nWhen used properly, videos (1) {_} be very educational for children. Of course, they (2) {_} be suitable for their age and children (3) {_} not just be placed in front of the television and left unsupervised. Parents (4) {_} to be actively involved, too, as children (5) {_} not be passive viewers; they need someone to interact with while watching.",
+          prompt: "Text C\nWhen used properly, videos {_} be very educational for children. Of course, they {_} be suitable for their age and children {_} not just be placed in front of the television and left unsupervised. Parents {_} to be actively involved, too, as children {_} not be passive viewers; they need someone to interact with while watching.",
           answer: [["can", "may", "could"], ["must", "should"], ["should", "must"], ["need", "have", "ought"], ["should", "must"]],
           explain: "(1) **can** = สามารถให้ความรู้ได้\n(2) **must / should** = ต้อง/ควรเหมาะกับวัย\n(3) **should** not = ไม่ควรปล่อยเด็กไว้ลำพัง\n(4) **need** to / have to = จำเป็นต้องมีส่วนร่วม\n(5) **should** not = ไม่ควรเป็นผู้ชมเฉย ๆ",
         },
         {
           n: [17, 18, 19, 20, 21, 22], type: "type-fill", summaryRef: 4,
-          prompt: "Text D\nMy car broke down yesterday and I (1) {_} to take the bus to work. I (2) {_} have taken a taxi instead, as it was a frustrating experience. We were all squashed together like sardines in a tin and we (3) {_} hardly breathe. To make matters worse, an overweight lady standing next to me wanted to get off at one point. “(4) {_} you mind moving a bit to the side so that I (5) {_} get to the door?” she said. She nearly squashed me to death! (6) {_} the public transportation system be this bad?",
+          prompt: "Text D\nMy car broke down yesterday and I {_} to take the bus to work. I {_} have taken a taxi instead, as it was a frustrating experience. We were all squashed together like sardines in a tin and we {_} hardly breathe. To make matters worse, an overweight lady standing next to me wanted to get off at one point. “{_} you mind moving a bit to the side so that I {_} get to the door?” she said. She nearly squashed me to death! {_} the public transportation system be this bad?",
           answer: [["had"], ["should"], ["could"], ["would"], ["can", "could"], ["can", "could", "must"]],
           explain: "(1) **had** to = ต้อง (อดีต)\n(2) **should** have taken = น่าจะนั่งแท็กซี่ (แต่ไม่ได้ทำ)\n(3) **could** hardly breathe = แทบหายใจไม่ได้\n(4) **Would** you mind…? = ขอร้องสุภาพ\n(5) so that I **can / could** get to the door\n(6) **Can** the public transportation system be this bad? = เป็นไปได้หรือที่จะแย่ขนาดนี้",
         },

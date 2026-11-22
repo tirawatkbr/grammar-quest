@@ -43,6 +43,9 @@ Rule: the source folder `OneDrive\Desktop\M.4` is READ-ONLY (only the PDFs are r
 - First page load keeps natural focus (Tab → skip link); route changes move focus to the h1.
 - Tables in summary cards stack into labelled rows below 600px (no horizontal scrolling).
 
-## Stopped here (usage limit) — next steps
-- Units u10 Passive (ch10), u11 Conditional (ch11), u12 Non-finite (ch12), u13 Modal (ch13), u14 Preposition (ch18): follow the per-unit checklist.
-- Then Phase 5: full e2e + axe run, screenshots review at 375/1280 light/dark, write docs/A11Y-AUDIT.md.
+## Final status (2026-11-23)
+- All 14 units done: 1374 questions (1164 from the sheets + 210 new TOEIC), validator 0 errors, second-pass answers 1374/1374 agree.
+- `node tests/e2e/run.mjs --full`: 1504 passed, 0 failed (axe light/dark, layout 320–1280 + 200% text, keyboard, sync, offline, WebKit, every question played through the UI).
+- Unit tests: `node --test tests/unit/logic.test.mjs` 17/17.
+- Contrast: 52/52 token pairs pass (docs/A11Y-AUDIT.md).
+- Left for the owner: Firebase setup (README), real-learner test of H2/H4, real screen-reader test.
