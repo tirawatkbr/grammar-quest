@@ -24,3 +24,14 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
   the explanation says so.
 - Ex.4 #4: "have difficulty (in) doing" — answer *difficulty*.
 - Concept page: "two slides of bread" → corrected to "two slices of bread".
+
+## Unit 3 — Article (sheet chapter 3)
+- Ex.0 (20), Ex.1 (20), Ex.2 passage (22 blanks), Ex.3 passage (26 blanks), Ex.4 (30) — all included.
+- Passages are split into questions by sentence; each question shows the previous sentence as context
+  (with earlier blanks already filled), and the ref lists every blank it covers, e.g. `Ex.2 #3,4`.
+- "-" (no article) in the sheet's options is shown as "— (no article)".
+- Ex.1 asks for *the* when the noun is "defined by modifiers". Where natural English also allows a/an
+  (#7 engineer, #13 agency), both are accepted and the explanation names the sheet's rule.
+- Ex.1 #4: the sheet's question tag "didn't it" does not agree with "The questions" (should be "didn't they");
+  the sentence is kept and a tip explains this.
+- Ex.2 #6 ("one point on ___ grid") accepts a / the; Ex.3 #25 ("___ grocery store") accepts the / a.

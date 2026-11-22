@@ -140,11 +140,14 @@ for (const { file, unit } of units) {
       if (!["sheet", "toeic"].includes(q.source)) err(Q, "source must be sheet|toeic");
       if (q.source === "toeic") toeic++;
       if (q.source === "sheet") {
-        const m = /^Ex\.(\w+) #(\d+)$/.exec(q.ref || "");
-        if (!m) err(Q, `sheet question needs ref "Ex.N #k", got "${q.ref}"`);
+        const m = /^Ex\.(\w+) #(\d+(?:,\d+)*)$/.exec(q.ref || "");
+        if (!m) err(Q, `sheet question needs ref "Ex.N #k[,k]", got "${q.ref}"`);
         else {
           if (!refCount.has(m[1])) refCount.set(m[1], []);
-          refCount.get(m[1]).push(Number(m[2]));
+          const nums = m[2].split(",").map(Number);
+          refCount.get(m[1]).push(...nums);
+          const blanksHere = q.type === "choice-fill" || q.type === "type-fill" ? q.answer.length : 1;
+          if (nums.length > 1 && nums.length !== blanksHere) err(Q, `ref lists ${nums.length} items but question has ${blanksHere} blanks`);
         }
       }
       if (typeof q.explain !== "string" || plain(q.explain).length < 40) err(Q, "explain missing or < 40 chars");
@@ -165,7 +168,6 @@ for (const { file, unit } of units) {
             if (!q.whyWrong?.[k] || plain(q.whyWrong[k]).length < 20) err(Q, `whyWrong.${k} missing/short (<20)`);
           }
           for (const k of Object.keys(q.whyWrong || {})) if (!keys.includes(k) || okKeys.includes(k)) err(Q, `whyWrong.${k} not a wrong choice`);
-          if (blanks > 1) err(Q, "mcq prompt has more than one blank");
           break;
         }
         case "choice-fill": {

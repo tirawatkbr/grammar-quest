@@ -22,8 +22,14 @@ function promptWithBlanks(text, { numbered }) {
     if (i < parts.length - 1) {
       const b = h("span", { class: "blank", "aria-label": numbered ? `ช่องว่างที่ ${i + 1}` : "ช่องว่าง" }, " ");
       blanks.push(b);
-      p.append(b);
-      if (numbered) p.append(h("span", { class: "blank-num", "aria-hidden": "true" }, String(i + 1)));
+      p.append(
+        h(
+          "span",
+          { class: "blank-wrap" },
+          b,
+          numbered ? h("span", { class: "blank-num", "aria-hidden": "true" }, String(i + 1)) : null,
+        ),
+      );
     }
   });
   return { node: p, blanks };
@@ -31,7 +37,12 @@ function promptWithBlanks(text, { numbered }) {
 
 function contextBlock(q) {
   if (!q.context) return null;
-  return h("div", { class: "prompt prompt-context", lang: "en" }, rich(q.context));
+  return h(
+    "div",
+    { class: "stack-sm" },
+    h("p", { class: "small muted" }, "ข้อความก่อนหน้า (บริบท)"),
+    h("div", { class: "prompt prompt-context", lang: "en" }, rich(q.context)),
+  );
 }
 
 /** Generic radio group with roving tabindex + arrow keys. */
@@ -78,7 +89,7 @@ function stateTag(kind) {
 // ---------------- mcq ----------------
 function renderMcq(q, onChange) {
   let response = null;
-  const { node } = promptWithBlanks(q.prompt, { numbered: false });
+  const { node } = promptWithBlanks(q.prompt, { numbered: splitBlanks(q.prompt).length > 2 });
   const rg = radioGroup(q.choices, {
     label: "ตัวเลือก",
     onSelect: (i) => {

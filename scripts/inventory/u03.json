@@ -1,0 +1,13 @@
+{
+  "chapter": 3,
+  "pages": 9,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3-4). Ex.2 and Ex.3 are passages; blanks are grouped by sentence.",
+  "exercises": [
+    { "ex": "0", "count": 20, "type": "mcq", "pages": "3-4" },
+    { "ex": "1", "count": 20, "type": "a/an/some/the", "pages": "5" },
+    { "ex": "2", "count": 22, "type": "passage a/an/the", "pages": "5-6" },
+    { "ex": "3", "count": 26, "type": "passage a/an/some/the", "pages": "6" },
+    { "ex": "4", "count": 30, "type": "mcq", "pages": "7-9" }
+  ],
+  "toeicMin": 15
+}

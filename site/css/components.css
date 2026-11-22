@@ -361,6 +361,10 @@
   border-radius: 4px 4px 0 0;
 }
 
+.blank-wrap {
+  white-space: nowrap;
+}
+
 .blank-num {
   font-size: var(--fs-xs);
   color: var(--text-muted);

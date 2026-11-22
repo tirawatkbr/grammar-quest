@@ -127,5 +127,81 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u03",
+    "chapter": 3,
+    "title": "Article",
+    "titleTh": "คำนำหน้านาม",
+    "file": "u03.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u03-l1",
+        "title": "a / an / the / ไม่ใส่ (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l2",
+        "title": "a / an / the / ไม่ใส่ (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l3",
+        "title": "a / an / some หรือ the (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l4",
+        "title": "a / an / some หรือ the (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l5",
+        "title": "บทความ: แผนที่แมนฮัตตัน (a / an / the)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l6",
+        "title": "บทความ: เที่ยวลอสแอนเจลิส (1)",
+        "kind": "sheet",
+        "count": 7
+      },
+      {
+        "id": "u03-l7",
+        "title": "บทความ: เที่ยวลอสแอนเจลิส (2)",
+        "kind": "sheet",
+        "count": 7
+      },
+      {
+        "id": "u03-l8",
+        "title": "เลือก article ที่ถูกต้อง (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l9",
+        "title": "เลือก article ที่ถูกต้อง (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l10",
+        "title": "เลือก article ที่ถูกต้อง (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u03-l11",
+        "title": "แนวข้อสอบ TOEIC: Article",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];
