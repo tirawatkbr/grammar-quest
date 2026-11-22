@@ -833,5 +833,63 @@ export const UNITS = [
         "count": 15
       }
     ]
+  },
+  {
+    "id": "u13",
+    "chapter": 13,
+    "title": "Modal Verb",
+    "titleTh": "กริยาช่วย",
+    "file": "u13.js",
+    "summaryCount": 5,
+    "lessons": [
+      {
+        "id": "u13-l1",
+        "title": "เลือก Modal Verb",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u13-l2",
+        "title": "บทความ: เติม Modal Verb (Text A–B)",
+        "kind": "sheet",
+        "count": 2
+      },
+      {
+        "id": "u13-l3",
+        "title": "บทความ: เติม Modal Verb (Text C–D)",
+        "kind": "sheet",
+        "count": 2
+      },
+      {
+        "id": "u13-l4",
+        "title": "เขียนประโยคใหม่ด้วย Modal",
+        "kind": "sheet",
+        "count": 7
+      },
+      {
+        "id": "u13-l5",
+        "title": "เลือกคำตอบ Modal Verb (1)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u13-l6",
+        "title": "เลือกคำตอบ Modal Verb (2)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u13-l7",
+        "title": "เลือกคำตอบ Modal Verb (3)",
+        "kind": "sheet",
+        "count": 10
+      },
+      {
+        "id": "u13-l8",
+        "title": "แนวข้อสอบ TOEIC: Modal Verb",
+        "kind": "toeic",
+        "count": 15
+      }
+    ]
   }
 ];

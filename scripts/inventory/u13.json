@@ -1,0 +1,12 @@
+{
+  "chapter": 13,
+  "pages": 8,
+  "note": "Counted from page images. Ex '0' = unnumbered 'Exercise' (p.3, 10 items). Ex.1 texts A-D have 4+7+5+6 = 22 blanks, numbered 1-22 in order.",
+  "exercises": [
+    { "ex": "0", "count": 10, "type": "mcq", "pages": "3" },
+    { "ex": "1", "count": 22, "type": "modal verbs in texts A-D", "pages": "4" },
+    { "ex": "2", "count": 7, "type": "rewrite with given words", "pages": "5" },
+    { "ex": "3", "count": 30, "type": "mcq", "pages": "5-8" }
+  ],
+  "toeicMin": 15
+}

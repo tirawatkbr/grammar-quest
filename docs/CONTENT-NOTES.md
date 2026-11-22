@@ -97,3 +97,9 @@ Exercise labels: `Ex.0` = the first, unnumbered "Exercise" of a chapter; `Ex.1`,
 - Ex.0 (20), Ex.1 (50 "to do / doing"), Ex.2 (15), Ex.3 (30) — all included.
 - Ex.1 follows the sheet's verb lists; verbs that take an object (or passive) + to V are explained as such.
 - Ex.3 #12 / #15: "were beginning ___" → to feel / to worry (avoids double -ing).
+
+## Unit 13 — Modal Verb (sheet chapter 13, 8 pages)
+- Ex.0 (10), Ex.1 (Texts A–D, 22 blanks), Ex.2 (7 rewrites as word-order questions), Ex.3 (30) — all included.
+- Ex.1 accepts every modal that fits each blank (e.g. Text B (4)/(5) may / might / could).
+- Ex.3 #23: answer *didn't need to work* — the text says "we left the office at the usual hour", so no overtime
+  was done (needn't have worked would mean it was done unnecessarily). The explanation compares the two.
